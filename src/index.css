@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Global ===== */
+* { box-sizing: border-box; }
+body { margin: 0; }
+
+/* ===== PDF / Print Safety ===== */
+#cv-preview {
+  overflow: visible;
+}
+#cv-preview * {
+  overflow: visible;
+  box-sizing: border-box;
+}
+#cv-preview .template {
+  height: auto !important;
+  min-height: 1100px;
+}
+#cv-preview aside {
+  min-height: 100%;
+}
+#cv-preview h1, #cv-preview h2, #cv-preview p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ===== Photo circle clip — must override overflow:visible above ===== */
+#cv-preview div[style*="border-radius: 50%"],
+#cv-preview div[style*="borderRadius: '50%'"] {
+  overflow: hidden !important;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+#cv-preview div[style*="border-radius: 50%"] img,
+#cv-preview div[style*="50%"][style*="overflow"] img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+}
+
+/* ===== Scrollbar — always visible ===== */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #e2e8f0; border-radius: 9999px; }
+::-webkit-scrollbar-thumb { background: #64748b; border-radius: 9999px; min-height: 40px; }
+::-webkit-scrollbar-thumb:hover { background: #334155; }
+* { scrollbar-width: thin; scrollbar-color: #64748b #e2e8f0; }
