@@ -2,85 +2,17 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 const defaultCV = {
-  // Personal
-  name: 'Bambang Priambodo',
-  job_title: 'Senior OSS Engineer',
-  email: 'bpriambodo17@gmail.com',
-  phone: '+62 821 3476 9104',
-  address: 'Jln.Beringin Asri Barat, Kota Semarang, ID',
-  photo: null, // base64 string
-
-  // Summary
-  summary:
-    'Telecommunications Data Analyst with 8+ years of experience in network performance analysis, OSS operations, and KPI monitoring across major telecom projects including Telkomsel and XL. Skilled in SQL, MySQL, Excel automation, Python scripting, and Tableau dashboards.',
-
-  // Skills
-  skills: [
-    { id: 1, name: 'SQL', category: 'Database' },
-    { id: 2, name: 'MySQL', category: 'Database' },
-    { id: 3, name: 'Python', category: 'Programming' },
-    { id: 4, name: 'Excel', category: 'Analytics' },
-    { id: 5, name: 'Tableau', category: 'Analytics' },
-    { id: 6, name: 'Excel Macro', category: 'Automation' },
-  ],
-
-  // Experience
-  experience: [
-    {
-      id: 1,
-      position: 'Senior OSS Engineer',
-      company: 'PT Nexwave',
-      startDate: 'Feb 2025',
-      endDate: 'Present',
-      responsibilities: [
-        'Designed automated dashboards for 2G/4G/5G network performance monitoring',
-        'Developed Telegram Bot integrated with MySQL database to automate KPI reporting',
-        'Performed signaling trace analysis to diagnose network performance issues',
-      ],
-    },
-    {
-      id: 2,
-      position: 'Senior OSS Engineer',
-      company: 'PT Poca Jaringan Solusi',
-      startDate: 'Jun 2023',
-      endDate: 'Jan 2025',
-      responsibilities: [
-        'Conducted Network Performance Testing (NPT) for telecom sites',
-        'Developed Excel Macro automation to consolidate multiple network reports',
-        'Built SQL data ingestion pipeline to process CSV telecom datasets',
-      ],
-    },
-    {
-      id: 3,
-      position: 'OSS Engineer',
-      company: 'Lintas Media Telekomunikasi',
-      startDate: 'Dec 2015',
-      endDate: 'Mar 2020',
-      responsibilities: [
-        'Processed telecom raw data using SQL databases',
-        'Developed Excel dashboards for network KPI performance analysis',
-        'Monitored drive test data and network site activity',
-      ],
-    },
-  ],
-
-  // Education
-  education: [
-    {
-      id: 1,
-      degree: 'Diploma Degree',
-      institution: 'AMIKOM Cipta Darma',
-      startDate: '',
-      endDate: '',
-      notes: '',
-    },
-  ],
-
-  // Links
-  links: [
-    { id: 1, label: 'Email', url: 'mailto:bpriambodo17@gmail.com' },
-    { id: 2, label: 'LinkedIn', url: 'https://linkedin.com/in/' },
-  ],
+  name: '',
+  job_title: '',
+  email: '',
+  phone: '',
+  address: '',
+  photo: null,
+  summary: '',
+  skills: [],
+  experience: [],
+  education: [],
+  links: [],
 }
 
 export const useCVStore = create(
